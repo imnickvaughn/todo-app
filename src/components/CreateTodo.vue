@@ -14,6 +14,10 @@
             <label>Project</label>
             <input v-model="projectText" type="text" ref="project" defaultValue>
           </div>
+          <div class="field">
+            <label>Due Date</label>
+            <input v-model="dueDateText" type="text" ref="dueDate" defaultValue>
+          </div>
           <div class="ui two button attached buttons">
             <button class="ui basic blue button" v-on:click="sendForm()">Create</button>
             <button class="ui basic red button" v-on:click="closeForm">Cancel</button>
@@ -30,6 +34,7 @@ export default {
     return {
       titleText: "",
       projectText: "",
+      dueDateText: "",
       isCreating: false
     };
   },
@@ -41,12 +46,18 @@ export default {
       this.isCreating = false;
     },
     sendForm() {
-      if (this.titleText.length > 0 && this.projectText.length > 0) {
+      if (
+        this.titleText.length > 0 &&
+        this.projectText.length > 0 &&
+        this.dueDateText.length > 0
+      ) {
         const title = this.titleText;
         const project = this.projectText;
+        const dueDate = this.dueDateText;
         this.$emit("add-todo", {
           title,
           project,
+          dueDate,
           done: false
         });
         this.newTodoText = "";

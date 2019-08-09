@@ -3,6 +3,7 @@
     <div class="content" v-show="!isEditing">
       <div class="header">{{ todo.title }}</div>
       <div class="meta">{{ todo.project }}</div>
+      <div class="meta">{{ todo.dueDate }}</div>
       <div class="extra content">
         <span class="right floated edit icon" v-on:click="showForm">
           <i class="edit icon"></i>
@@ -22,6 +23,10 @@
         <div class="field">
           <label>Project</label>
           <input type="text" v-model="todo.project">
+        </div>
+        <div class="field">
+          <label>Due Date</label>
+          <input type="text" v-model="todo.dueDate">
         </div>
         <div class="ui two button attached buttons">
           <button class="ui basic blue button" v-on:click="hideForm">Close X</button>
