@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     addTodo(todo) {
-      console.log("created");
       this.todos.push(todo);
     }
   }
