@@ -20,21 +20,19 @@ export default {
         {
           title: "Todo A",
           project: "Project A",
+          dueDate: "08/12/2019",
           done: false
         },
         {
           title: "Todo B",
           project: "Project B",
+          dueDate: "08/12/2019",
           done: true
         },
         {
           title: "Todo C",
           project: "Project C",
-          done: false
-        },
-        {
-          title: "Todo D",
-          project: "Project D",
+          dueDate: "08/12/2019",
           done: false
         }
       ]
